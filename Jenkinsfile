@@ -10,14 +10,14 @@ pipeline{
           stage('Build Docker Image'){
         steps{
             script{
-             sh '/usr/local/bin/docker build -t angular-image .'
+             sh ' /var/lib/docker build -t angular-image .'
             }
         }
         }
           stage('Run Docker Container'){
             steps{
             script{
-             sh '/usr/local/bin/docker run -p 8090:80 angular-image'
+             sh ' /var/lib/docker run -p 8090:80 angular-image'
               }
             }
         }
