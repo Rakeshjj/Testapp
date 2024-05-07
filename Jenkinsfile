@@ -10,14 +10,14 @@ pipeline{
           stage('Build Docker Image'){
         steps{
             script{
-             sh ' /usr/local/bin/docker build -t angular-image .'
+             sh ' C:\Program Files\Docker\Docker\resources\bin\docker.exe build -t angular-image .'
             }
           }
         }
           stage('Run Docker Container'){
             steps{
             script{
-             sh ' /usr/local/bin/docker run -p 8090:80 angular-image'
+             sh ' C:\Program Files\Docker\Docker\resources\bin\docker.exe run -p 8090:80 angular-image'
               }
             }
         }
