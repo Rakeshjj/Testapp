@@ -5,14 +5,14 @@ pipeline{
         stage('Clone Repository'){
         steps{
             git 'https://github.com/Rakeshjj/Testapp'
-        }
-        }
+            }
+         }
           stage('Build Docker Image'){
         steps{
             script{
              sh ' /var/lib/docker build -t angular-image .'
             }
-        }
+          }
         }
           stage('Run Docker Container'){
             steps{
